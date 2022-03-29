@@ -1,0 +1,8 @@
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\FileAndFileInfo.exe.config
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\FileAndFileInfo.exe
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\FileAndFileInfo.pdb
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.csproj.AssemblyReference.cache
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.csproj.SuggestedBindingRedirects.cache
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.csproj.CoreCompileInputs.cache
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.exe
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.pdb
