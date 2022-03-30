@@ -3,9 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Security.AccessControl;
+using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Services.Description;
 
 namespace FileAndFileInfo
 {
@@ -13,26 +16,69 @@ namespace FileAndFileInfo
     {
         static void Main(string[] args)
         {
-            string sourcePath = @"c:\temp\file1.txt";
-            //string sourcePath = "c:\\temp\\file1.txt";
-            string targetPath = @"c:\temp\file2.txt";
+
 
             try
             {
-                File.Copy(sourcePath, targetPath);
-                string [] lines = File.ReadAllLines(sourcePath);
-                foreach (string line in lines)
+
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Service ");
+                ManagementObjectCollection services = searcher.Get();
+                string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                filePath += @"\services.txt";
+
+                // Check if file already exists. If yes, delete it.     
+                if (File.Exists(filePath))
                 {
-                    Console.WriteLine(line);
+                    File.Delete(filePath);
                 }
-                Console.WriteLine("teste");
+                Console.WriteLine(filePath);
+
+
+
+                int count = 0;
+                using (StreamWriter sw = File.CreateText(filePath))
+                {
+                    foreach (var obj in services)
+                    {
+                        string name = obj["Name"] as string;
+                        string displayName = obj["DisplayName"] as string;
+                        string pathName = obj["PathName"] as string;
+                        if (displayName.ToLower().Contains("ayty"))
+                        {
+                            string line = "sc create ";
+                            line += name;
+                            line += " binPath= ";
+                            line += pathName.Split(' ')[0];
+                            line += " DisplayName= " + displayName;
+                            line += " Start= disabled";
+                            
+                            pathName = pathName.Split(' ')[0];
+                            sw.WriteLine(line);
+
+                            count++;
+                        }
+
+                    }
+                }
+                if (count == 0)
+                {
+                    Console.WriteLine("Não foi encontrado nenhum serviço com o nome : Ayty");
+                }
+                else
+                {
+                    Console.WriteLine("Programa Finalizado.");
+                }
                 Console.ReadKey();
-                
-            }catch(IOException e)
+
+
+
+
+            }
+            catch (Exception ex)
             {
-                Console.WriteLine("Error! ",e.Message);
-                Console.ReadKey();
+                Console.WriteLine(ex.Message);
             }
         }
+
     }
 }

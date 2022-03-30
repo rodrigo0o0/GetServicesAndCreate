@@ -6,3 +6,10 @@ C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFil
 C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.csproj.CoreCompileInputs.cache
 C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.exe
 C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.pdb
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\System.Diagnostics.EventLog.dll
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\System.ServiceProcess.ServiceController.dll
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\bin\Debug\System.ServiceProcess.ServiceController.xml
+C:\Users\sande\source\repos\FileAndFileInfo\FileAndFileInfo\obj\Debug\FileAndFileInfo.csproj.CopyComplete
